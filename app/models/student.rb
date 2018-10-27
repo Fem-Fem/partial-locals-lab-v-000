@@ -18,7 +18,7 @@ class Student < ActiveRecord::Base
     if string != ""
       where("name like ?", "%#{string}%")
     else
-      return Student.all
+      return self.all
     end
   end
 end
