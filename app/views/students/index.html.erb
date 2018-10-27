@@ -4,3 +4,7 @@
     <%= submit_tag "Search", name: nil %>
   </p>
 <% end %>
+
+<% @students.each do |student| %>
+  <%= render partial: 'student', locals: {student: student} %>
+<% end %>
