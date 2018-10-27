@@ -22,9 +22,10 @@ class Student < ActiveRecord::Base
       all = Student.all
       all.each do |student|
         if student.name.include?(string)
-          all << string
+          array << string
         end
       end
+      return array
     end
   end
 end
