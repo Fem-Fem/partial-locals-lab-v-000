@@ -24,7 +24,7 @@ class Student < ActiveRecord::Base
         x = student.name.downcase
         binding.pry
         if x.include?(string)
-          array << string
+          array << student
         end
       end
       return array
