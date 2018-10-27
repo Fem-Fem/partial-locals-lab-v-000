@@ -18,15 +18,7 @@ class Student < ActiveRecord::Base
     if string != ""
       where()
     else
-      array = []
-      all = Student.all
-      all.each do |student|
-        x = student.name.downcase
-        if x.include?(string)
-          array << student
-        end
-      end
-      return array
+      return Student.all
     end
   end
 end
