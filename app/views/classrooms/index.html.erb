@@ -1,3 +1,11 @@
+form_tag dskjfdjk do |f|
+<p>
+
+
+</p>
+f.submit
+<% end %>
+
 <% @classroom.students.each do |student| %>
   <%= render partial: "students/student", locals: {post_student: student} %>
 <% end %>
