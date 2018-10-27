@@ -16,7 +16,7 @@ class Student < ActiveRecord::Base
 
   def self.search(string)
     if string != ""
-      where()
+      where("name like ?", "%#{string}%")
     else
       return Student.all
     end
