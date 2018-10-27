@@ -15,8 +15,8 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(string)
-    if string == ""
-      return Student.all
+    if string != ""
+      where()
     else
       array = []
       all = Student.all
