@@ -20,8 +20,8 @@ class Student < ActiveRecord::Base
     else
       array = []
       all = Student.all
-      all.each do |name|
-        if name.includes?(string)
+      all.each do |student|
+        if student.name.includes?(string)
           all << string
         end
       end
